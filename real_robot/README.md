@@ -135,6 +135,18 @@ python imle_dex/precise_dex/pkl2zarr.py \
 
 The converter searches recursively for episode pickle files. It expects the recorder's format, including measured hand positions. The example uses 22 action dimensions (6 arm + 16 hand), 34 state dimensions, and two stacked camera/state observations. Keep these conventions consistent across collection, training and RL. Existing Zarr output requires explicit `--overwrite` to replace.
 
+With `--stack_obs_num=2`, the converted dataset uses the following layout:
+
+| Zarr field | Values per timestep | Meaning |
+| --- | --- | --- |
+| `side_policy_256_0`, `side_policy_256_1` | One RGB image each | Two history frames from the same camera |
+| `leap_pose` | 32 | Two frames of 16 measured hand joint positions |
+| `tcp_force`, `tcp_torque` | 6 each | Two frames of 3D force and torque |
+| `tcp_pose`, `tcp_vel` | 12 each | Two frames of 6D TCP pose and velocity |
+| `action` | 22 | 6 arm commands followed by 16 hand joint targets |
+
+The converter builds `leap_pose` from the recorder's measured `leap_hw_pos` field, normalizes it to `[-1, 1]`, and flattens the two-frame history. The recorder also normalizes the hand targets in `action[6:22]` to `[-1, 1]`; `action[:6]` retains the arm commands. The low-dimensional observations total 68 values after stacking (34 per frame). See [the converter](imle_dex/precise_dex/pkl2zarr.py) and [the task configuration](imle_dex/precise_dex/psi_policy/config/task/franka_leap_image_singlergb.yaml) for the field definitions.
+
 Train the base policy:
 
 ```bash
