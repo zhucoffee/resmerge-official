@@ -10,6 +10,10 @@
 
 </div>
 
+<p align="center">
+  <img src="assets/resmerge_overview.png" alt="ResMerge overview: learn residual policies, measure residual-field consistency, and merge compatible experts" width="100%">
+</p>
+
 **Learn residuals. Check compatibility. Merge robot policies.** ResMerge adapts a frozen robot policy to new tasks with lightweight residual experts. Residual-Field Consistency (RFC) compares their action corrections to guide which experts to merge and refine.
 
 ## 🚀 Quick Start
