@@ -1,6 +1,6 @@
 # 🧪 ResMerge in Simulation
 
-[📄 Paper](https://openreview.net/forum?id=wLtzr7PNBI) · [🌐 Project](https://resmerge.github.io/) · [🏠 Main README](../README.md)
+[📄 Paper](https://arxiv.org/abs/2610.41663) · [🌐 Project](https://resmerge.github.io/) · [🏠 Main README](../README.md)
 
 Run ResMerge with a frozen **OpenVLA-OFT** base policy on **LIBERO**, using RGB observations and proprioception. This guide follows the RGB experiment recipe.
 

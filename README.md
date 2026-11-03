@@ -4,7 +4,7 @@
 
 <p><b>Residual Policy Learning and Merging for<br>Continual Adaptation of Pre-trained Robot Policies</b></p>
 
-<a href="https://openreview.net/forum?id=wLtzr7PNBI"><img src="https://img.shields.io/badge/%F0%9F%93%84_Paper-OpenReview-b31b1b?style=for-the-badge" alt="Paper"></a>
+<a href="https://arxiv.org/abs/2610.41663"><img src="https://img.shields.io/badge/%F0%9F%93%84_Paper-arXiv-b31b1b?style=for-the-badge" alt="Paper"></a>
 <a href="https://resmerge.github.io/"><img src="https://img.shields.io/badge/%F0%9F%8C%90_Project-Website-2563eb?style=for-the-badge" alt="Project Website"></a>
 <a href="LICENSE"><img src="https://img.shields.io/badge/License-Apache_2.0-10b981?style=for-the-badge" alt="License: Apache 2.0"></a>
 

@@ -1,6 +1,6 @@
 # 🦾 ResMerge on Real Robots
 
-[📄 Paper](https://openreview.net/forum?id=wLtzr7PNBI) · [🌐 Project](https://resmerge.github.io/) · [🏠 Main README](../README.md) · [🔧 Hardware](HARDWARE.md) · [🧪 Simulation](../sim/README.md)
+[📄 Paper](https://arxiv.org/abs/2610.41663) · [🌐 Project](https://resmerge.github.io/) · [🏠 Main README](../README.md) · [🔧 Hardware](HARDWARE.md) · [🧪 Simulation](../sim/README.md)
 
 Real-robot code for ResMerge with a Franka arm and a 16-DoF LEAP right hand. This repository provides IMLE pretraining, task-specific LoRA residual SAC training, residual-field merge analysis, multi-task actor merging and real-robot evaluation. `pick_place` is the supplied task-environment example.
 
